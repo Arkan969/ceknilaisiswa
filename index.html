@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek kelulusan siswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Cek Kelulusan Siswa</h2>
+        
+        <form id="formPenilaian">
+         
+            <div class="form-group">
+                <label for="namaSiswa">Nama Siswa:</label>
+                <input type="text" id="namaSiswa" placeholder="Masukkan nama siswa" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nilaiSiswa">Nilai Siswa (0 - 100):</label>
+                <input type="number" id="nilaiSiswa" min="0" max="100" placeholder="Masukkan nilai siswa!" required>
+            </div>
+
+            <button type="button" onclick="prosesPenilaian()">Cek kelulusan</button>
+        </form>
+
+        <div id="hasilPenilaian" class="result-box">
+            <h3>Hasil Penilaian</h3>
+            <p class="result-item"><strong>Nama:</strong> <span id="resNama"></span></p>
+            <p class="result-item"><strong>Nilai :</strong> <span id="resNilai"></span></p>
+            <p class="result-item"><strong>Grade:</strong> <span id="resGrade"></span></p>
+            <p class="result-item"><strong>Status Kelulusan:</strong> <span id="resStatus"></span></p>
+            <p class="result-item"><strong>Pesan:</strong> <span id="resPesan"></span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</html>
